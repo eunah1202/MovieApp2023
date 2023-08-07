@@ -1,0 +1,20 @@
+/* Navigation.css */
+.nav{z-index:1;position:fixed;left:10px;top:50px;
+  background-color:#fff;padding:10px 20px; border-radius:5px;
+  box-shadow:0 13px 27px -5px rgba(50,50,93,0.25),
+  0 8px 16px -8px rgba(0,0,0,0.3),
+  0 -6px 16px -6px rgba(0,0,0,0.25);
+  display:flex;flex-direction:column;}
+  
+  .nav a{text-align:center;text-decoration:none;color:0008fc;
+    text-transform:uppercase;font-size:12px;font-weight:600;}
+    
+    /* a:not(:last-of-type)마지막 제외한 나머지에게 margin-bottom을 줘라 */
+    .nav a:not(:last-of-type){margin-bottom:20px;}
+
+
+@media screen and (max-width:767px) {
+  /* 미디어쿼리밖에서 적용한건 미디어쿼리 내에서도 적용된다 그래서 안되는걸 auto라고 작성해주는것  */
+  /* 기존에 입력한 값을 지워주려면 auto로 작성 */
+  .nav{width:100%;bottom:0;left:auto;top:auto;}
+}

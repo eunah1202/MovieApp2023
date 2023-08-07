@@ -1,0 +1,36 @@
+/* Home.css */
+/* scss구조때문에 세로로 써야해 */
+.container{
+  /* 내용물가운데 보낸것들 */
+  height:100%;
+  display:flex;
+  justify-content:center;
+}
+
+.loader{
+  width:100vw;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-weight:300;
+}
+
+.movies{
+  display:grid;
+  /* repeat:반복 /  2열로 해주는것 /  minmax: 최소크기400px, 최대크기1:1비율 */
+  grid-template-columns:repeat(2,minmax(400px,1fr));
+  /* 위치지정 1)position 2)float 3)flex 4)grid */
+  grid-gap:100px;
+  padding:50px;
+  width:80%;
+  padding-top:70px;
+}
+
+@media screen and (max-width:767px){ /* 0 ~ 767*/
+  .movies{
+    /* 모바일 크기되면 1열로 생성 */
+    grid-template-columns:1fr;
+    width:100%;
+  }
+}
